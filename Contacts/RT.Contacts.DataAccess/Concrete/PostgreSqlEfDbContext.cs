@@ -12,10 +12,12 @@ namespace RT.Contacts.DataAccess.Concrete
 
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<ContactDetail> ContactDetails { get; set; }
+        public DbSet<Report> Reports { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder) {
             builder.Entity<Contact>().HasKey(x => x.UUID);
             builder.Entity<Contact>().HasMany(x => x.IletisimBilgileri);
+            builder.Entity<Report>().HasKey(x => x.UUID);
         }
     }
 }

@@ -13,6 +13,8 @@ namespace RT.Contacts.Business
             services.AddScoped<IContactService, ContactManager>();
             services.AddScoped<IContactDal, ContactDal>();
             services.AddScoped<IContactDetailDal, ContactDetailDal>();
+            services.AddScoped<IReportService, ReportManager>();
+            services.AddScoped<IReportDal, ReportDal>();
             return services;
         }
     }

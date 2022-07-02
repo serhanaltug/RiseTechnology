@@ -18,34 +18,6 @@ namespace RT.Contacts.DataAccess.Concrete
             }
 
         }
-
-        //protected static double getTotalWorkTime(int employeeId)
-        //{
-        //    double result = 0;
-        //    using (var context = new DataContext())
-        //    {
-        //        var orders = context.Orders.Where(x => x.EmployeeId == employeeId && x.Status == 4).ToList();
-        //        foreach (var order in orders)
-        //        {
-        //            result += (Convert.ToDateTime(order.DeliveredTime) - Convert.ToDateTime(order.DeliveringTime)).TotalMinutes;
-        //        }
-        //    }
-        //    return result;
-        //}
-
-        //protected static double getMonthlyWorkTime(int employeeId)
-        //{
-        //    double result = 0;
-        //    using (var context = new DataContext())
-        //    {
-        //        var orders = context.Orders.Where(x => x.EmployeeId == employeeId && x.Status == 4 && (x.OrderDate.Year == DateTime.Now.Year && x.OrderDate.Month == DateTime.Now.Month)).ToList();
-        //        foreach (var order in orders)
-        //        {
-        //            result += (Convert.ToDateTime(order.DeliveredTime) - Convert.ToDateTime(order.DeliveringTime)).TotalMinutes;
-        //        }
-        //    }
-        //    return result;
-        //}
     }
 
 }
