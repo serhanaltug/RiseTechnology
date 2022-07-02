@@ -8,10 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RT.Contacts.Core\RT.Contacts.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DTOs\" />
+    <ProjectReference Include="..\RT.Contacts.DataAccess\RT.Contacts.DataAccess.csproj" />
+    <ProjectReference Include="..\RT.Contacts.Domain\RT.Contacts.Domain.csproj" />
   </ItemGroup>
 
 </Project>
