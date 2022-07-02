@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RT.Contacts.WebApi", "Conta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RT.Contacts.CompositionRoot", "Contacts\RT.Contacts.CompositionRoot\RT.Contacts.CompositionRoot.csproj", "{8827804A-EDFA-4021-B347-4CD05CE0793F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RT.Reports.WebApi", "Reports\RT.Reports.WebApi\RT.Reports.WebApi.csproj", "{C0F059CA-84F3-4F2C-84D7-6DF01808D5FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RT.Reports.WebApi", "Reports\RT.Reports.WebApi\RT.Reports.WebApi.csproj", "{C0F059CA-84F3-4F2C-84D7-6DF01808D5FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RT.Reports.QueService", "Reports\RT.Reports.QueService\RT.Reports.QueService.csproj", "{6F6FF833-E01F-47D3-B3BD-EC346170845E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RT.Reports.QueService", "Reports\RT.Reports.QueService\RT.Reports.QueService.csproj", "{6F6FF833-E01F-47D3-B3BD-EC346170845E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

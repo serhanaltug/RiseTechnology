@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,6 +9,13 @@
 
   <ItemGroup>
     <PackageReference Include="Confluent.Kafka" Version="1.9.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Contacts\RT.Contacts.Business\RT.Contacts.Business.csproj" />
+    <ProjectReference Include="..\..\Contacts\RT.Contacts.CompositionRoot\RT.Contacts.CompositionRoot.csproj" />
   </ItemGroup>
 
 </Project>

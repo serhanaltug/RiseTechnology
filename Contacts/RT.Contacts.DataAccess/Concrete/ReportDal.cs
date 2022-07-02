@@ -18,7 +18,6 @@ namespace RT.Contacts.DataAccess.Concrete
             }
         }
 
-
         public async Task<int> getTotalContactsCount(string location)
         {
             int result = 0;
@@ -34,7 +33,9 @@ namespace RT.Contacts.DataAccess.Concrete
             int result = 0;
             using (var context = new PostgreSqlEfDbContext())
             {
-                var contacts = await context.Contacts.Include(x => x.IletisimBilgileri.Where(x => x.BilgiTipi == BilgiTipi.Konum && x.BilgiIcerigi.ToLower() == location.ToLower())).ToListAsync();
+                var allContacts = await context.Contacts.Include(x => x.IletisimBilgileri).ToListAsync();
+                var contacts = allContacts.Where(x => x.IletisimBilgileri.Any(x => x.BilgiTipi == BilgiTipi.Konum && x.BilgiIcerigi.ToLower() == location.ToLower()));
+
                 foreach (var contact in contacts) { 
                     result += contact.IletisimBilgileri.Count(x => x.BilgiTipi == BilgiTipi.TelefonNumarasi);
                 }

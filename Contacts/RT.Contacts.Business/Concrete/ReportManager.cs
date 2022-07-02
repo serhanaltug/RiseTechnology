@@ -42,15 +42,21 @@ namespace RT.Contacts.Business.Concrete
             return new SuccessDataResult<Report>(_reports.Get(x => x.UUID == id));
         }
 
-        public IDataResult<Report> GetByLocation(string location)
+        public IDataResult<List<Report>> GetByLocation(string location)
         {
-            return new SuccessDataResult<Report>(_reports.Get(x => x.Konum == location));
+            return new SuccessDataResult<List<Report>>(_reports.GetAll(x => x.Konum == location));
         }
 
-        public async Task<IDataResult<string>> GetByLocationCount(string location)
+        public async Task<int> GetTotalContactsCountByLocation(string location)
         {
             var result = await _reports.getTotalContactsCount(location);
-            return new SuccessDataResult<string>(result.ToString());
+            return result;
+        }
+
+        public async Task<int> GetTotalPhoneNumbersCountByLocation(string location)
+        {
+            var result = await _reports.getTotalPhoneNumberCount(location);
+            return result;
         }
     }
 }

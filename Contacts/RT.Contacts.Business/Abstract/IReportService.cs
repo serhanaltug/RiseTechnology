@@ -15,9 +15,10 @@ namespace RT.Contacts.Business.Abstract
 
         IDataResult<Report> GetById(int id);
 
-        IDataResult<Report> GetByLocation(string location);
+        IDataResult<List<Report>> GetByLocation(string location);
 
-        Task<IDataResult<string>> GetByLocationCount(string location);
+        Task<int> GetTotalContactsCountByLocation(string location);
+        Task<int> GetTotalPhoneNumbersCountByLocation(string location);
 
     }
 }

@@ -1,4 +1,9 @@
 ﻿using Confluent.Kafka;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using RT.Contacts.Business.Abstract;
+using RT.Contacts.CompositionRoot;
+using RT.Reports.QueService.Models;
 
 namespace RT.Reports.QueService
 {
@@ -6,10 +11,11 @@ namespace RT.Reports.QueService
     {
         static void Main(string[] args)
         {
-            ReportConsumer();
+            var reports = new DataAccess();
+            ReportConsumer(reports);
         }
 
-        private static void ReportConsumer()
+        private static void ReportConsumer(DataAccess reports)
         {
             var config = new ConsumerConfig
             {
@@ -27,7 +33,9 @@ namespace RT.Reports.QueService
                 {
                     while (true) { 
                         var result = consumer.Consume();
-                        Console.WriteLine($"Message: {result.Message.Value} Topic: {result.TopicPartitionOffset}");
+                        var response = JsonConvert.DeserializeObject<ResponseModel>(result.Message.Value);
+                        reports.UpdateReport(response.RecordId).Wait();
+                        Console.WriteLine($"{result.Message.Value}");
                     }
                 }
                 catch (ConsumeException ex)
