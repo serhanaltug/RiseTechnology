@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using RT.Contacts.DataAccess.Concrete;
@@ -11,9 +12,10 @@ using RT.Contacts.DataAccess.Concrete;
 namespace RT.Contacts.DataAccess.Migrations
 {
     [DbContext(typeof(PostgreSqlEfDbContext))]
-    partial class PostgreSqlEfDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220702130502_Reports")]
+    partial class Reports
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
