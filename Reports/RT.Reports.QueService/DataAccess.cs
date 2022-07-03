@@ -19,6 +19,9 @@ namespace RT.Reports.QueService
 
         internal async Task UpdateReport(int id)
         {
+            await Task.Delay(20000);
+            //Burada rapor ile ilgili uzun süren işlemleri simüle ediyoruz. (Örneğin Excel oluşturma)
+
             var report = _reports.GetById(id).Data;
             if (report != null)
             {
@@ -31,7 +34,6 @@ namespace RT.Reports.QueService
 
                 _reports.Update(report);
 
-                await Task.Delay(10000);
             }
         }
     }

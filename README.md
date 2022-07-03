@@ -7,7 +7,7 @@ Tarih: 2 Temmuz 2022
 .NET Core ile basit bir rehber oluşturulması istendi.
 Uygulama WebApi olarak Yeni kişi ekleme, güncelleme, silme gibi basit CRUD işlemleri içermektedir.
 Kişilere iletişim bilgileri ekleme, güncelleme ve silme yapılabiliyor.
-Ayrıca iletişim bilgilerinde yer alan konuma göre kişi sayısı ve kayıtlı telefon sayısı rapor olarak alınabiliyor.
+Ayrıca iletişim bilgilerinde yer alan konuma göre kişi sayısı ve kayıtlı telefon sayısı rapor olarak alınabiliyor. Ayrıntılar için Assessment.pdf dosyasına bakınız.
 
 Swagger yada Postman ile test edilebilir.
 

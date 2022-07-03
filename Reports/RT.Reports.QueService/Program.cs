@@ -34,8 +34,11 @@ namespace RT.Reports.QueService
                     while (true) { 
                         var result = consumer.Consume();
                         var response = JsonConvert.DeserializeObject<ResponseModel>(result.Message.Value);
+                        Console.Write($"Message Recieved: {result.Message.Value}");
                         reports.UpdateReport(response.RecordId).Wait();
-                        Console.WriteLine($"{result.Message.Value}");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write($"\t Completed \n");
+                        Console.ResetColor();
                     }
                 }
                 catch (ConsumeException ex)

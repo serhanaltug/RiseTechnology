@@ -18,7 +18,7 @@ namespace RT.Contacts.Tests
         [Fact]
         public void Test_02_Should_Add_New_Contact()
         {
-            var contact = new Contact { Ad = "Test Contact Name", Soyad = "Test Contact Surname", Firma = "Test Contact Company" };
+            var contact = new Contact { Ad = "Test Name", Soyad = "Test Surname", Firma = "Test Company" };
             var result = _contacts.Add(contact);
             Assert.True(result.Success);
         }
