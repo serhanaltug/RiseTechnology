@@ -1,9 +1,9 @@
 # Rise Technology Örnek Proje
-#
-#
-Bu program Rise Tehnology için hazırlanmıştır. 
-Hazırlayan: Serhan Altug ([saltug@yahoo.com]) 
-Tarih: 2 Temmuz 2022 
+<br />
+<br />
+> Bu program Rise Tehnology için hazırlanmıştır. <br />
+> Hazırlayan: Serhan Altug ([saltug@yahoo.com]) <br />
+> Tarih: 2 Temmuz 2022 <br />
 
 ## Uygulama Hakkında
 
